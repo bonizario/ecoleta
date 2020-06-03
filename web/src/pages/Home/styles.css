@@ -1,14 +1,13 @@
 #page-home {
   height: 100vh;
-  background: fixed url('../../assets/home-background.svg') no-repeat 45vw center;
+  background: fixed url('../../assets/home-background.svg') no-repeat 35vw center;
 }
 
 #page-home .content {
-  width: 100%;
+  width: 90%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px;
 
   display: flex;
   flex-direction: column;
@@ -16,7 +15,7 @@
 }
 
 #page-home .content header {
-  margin: 48px 0 0;
+  margin-top: 48px;
 }
 
 #page-home .content main {
@@ -30,35 +29,35 @@
 
 #page-home .content main h1 {
   font-size: 54px;
-  color: var(--title-color);
 }
 
 #page-home .content main p {
   font-size: 24px;
-  margin-top: 24px;
   line-height: 38px;
+  margin-top: 24px;
 }
 
 #page-home .content main a {
   width: 100%;
   max-width: 360px;
   height: 72px;
-  background: var(--primary-color);
   border-radius: 8px;
-  text-decoration: none;
+  background: var(--primary-color);
 
   display: flex;
   align-items: center;
   overflow: hidden;
 
-  margin-top: 40px;
-  transition: background-color 200ms;
+  margin: 40px 0;
+  transition: background-color 250ms;
 }
 
 #page-home .content main a span {
   background: rgba(0, 0, 0, 0.08);
   width: 72px;
   height: 72px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 
   display: flex;
   align-items: center;
@@ -66,7 +65,7 @@
 }
 
 #page-home .content main a span svg {
-  color: #fff;
+  color: #fcfcfc;
   width: 20px;
   height: 20px;
 }
@@ -74,17 +73,22 @@
 #page-home .content main a strong {
   flex: 1;
   text-align: center;
-  color: #fff;
+  color: #fcfcfc;
 }
 
 #page-home .content main a:hover {
-  background: #2fb86e;
+  background-color: var(--primary-color-hover);
 }
 
-@media (max-width: 85rem), (max-height: 41.25rem) {
+@media (min-width: 1700px) {
   #page-home {
-    height: 100vh;
-    background: none;
+    background-position-x: 45vw;
+  }
+}
+
+@media (max-width: 1140px) {
+  #page-home {
+    background-position-x: 200vw;
   }
 
   #page-home .content {
@@ -93,7 +97,7 @@
   }
 
   #page-home .content header {
-    margin: 48px auto 36px;
+    margin: 48px auto 0;
   }
 
   #page-home .content main {
@@ -101,26 +105,38 @@
   }
 
   #page-home .content main h1 {
-    font-size: 42px;
+    font-size: 52px;
   }
 
   #page-home .content main p {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 
-@media (max-width: 26.25rem) {
+@media (max-height: 900px) {
+  #page-home {
+    background-position-y: 150px;
+  }
+}
+
+@media (max-width: 454px) {
   #page-home .content main a span {
     display: none;
   }
+  #page-home .content main a {
+    max-width: 288px;
+  }
+  #page-home .content main h1 {
+    font-size: 40px;
+  }
 }
 
-@media (max-width: 18.75rem), (max-height: 37.5rem) {
+@media (max-width: 300px), (max-height: 600px) {
   #page-home {
     height: 110vh;
   }
 
-  #page-home .content main a {
-    margin-bottom: 24px;
+  #page-home .content header {
+    margin-bottom: 48px;
   }
 }
