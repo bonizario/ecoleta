@@ -1,6 +1,6 @@
 #page-home {
   height: 100vh;
-  background: url('../../assets/home-background.svg') no-repeat 45vw 15vh;
+  background: fixed url('../../assets/home-background.svg') no-repeat 45vw center;
 }
 
 #page-home .content {
@@ -56,7 +56,6 @@
 }
 
 #page-home .content main a span {
-  display: block;
   background: rgba(0, 0, 0, 0.08);
   width: 72px;
   height: 72px;
@@ -94,7 +93,7 @@
   }
 
   #page-home .content header {
-    margin: 48px auto 0;
+    margin: 48px auto 36px;
   }
 
   #page-home .content main {
@@ -107,5 +106,21 @@
 
   #page-home .content main p {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 26.25rem) {
+  #page-home .content main a span {
+    display: none;
+  }
+}
+
+@media (max-width: 18.75rem), (max-height: 37.5rem) {
+  #page-home {
+    height: 110vh;
+  }
+
+  #page-home .content main a {
+    margin-bottom: 24px;
   }
 }
