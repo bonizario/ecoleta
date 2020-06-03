@@ -26,12 +26,10 @@ const CreatePoint = () => {
           <legend>
             <h2>Dados</h2>
           </legend>
-
           <div className="field">
             <label htmlFor="name">Nome da entidade</label>
             <input type="text" name="name" id="name" />
           </div>
-
           <div className="field-group">
             <div className="field">
               <label htmlFor="name">Email</label>
@@ -43,6 +41,7 @@ const CreatePoint = () => {
             </div>
           </div>
         </fieldset>
+
         <fieldset>
           <legend>
             <h2>Endereço</h2>
@@ -80,31 +79,12 @@ const CreatePoint = () => {
           </legend>
 
           <ul className="items-grid">
-            {}
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li className="selected">
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
-            <li>
-              <img src="http://localhost:3333/uploads/oleo.svg" alt="Teste" />
-              <span>Óleo de Cozinha</span>
-            </li>
+            {items.map(item => (
+              <li key={item.id}>
+                <img src={item.image_url} alt={item.title} />
+                <span>{item.title}</span>
+              </li>
+            ))}
           </ul>
         </fieldset>
         <button type="submit">Cadastrar ponto de coleta</button>
