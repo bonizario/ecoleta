@@ -2,6 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { Feather as Icon } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+
 import {
   Container,
   Main,
