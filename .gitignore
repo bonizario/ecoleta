@@ -14,6 +14,18 @@
 # production
 /build
 
+# expo-cli
+.expo/*
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
+
 # misc
 .DS_Store
 .env.local
