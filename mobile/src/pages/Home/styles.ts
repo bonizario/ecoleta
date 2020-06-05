@@ -11,6 +11,8 @@ export const Main = styled.View`
   justify-content: center;
 `;
 
+export const Ecoleta = styled.Image``;
+
 export const Title = styled.Text`
   color: #322154;
   font-size: 32px;
@@ -30,13 +32,15 @@ export const Description = styled.Text`
 
 export const Footer = styled.View``;
 
-export const FooterInput = styled.TextInput`
+export const Input = styled.View`
+  align-items: center;
+  justify-content: center;
   height: 60px;
   background-color: #fcfcfc;
   border-radius: 8px;
   margin-bottom: 8px;
   padding: 0 24px;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 export const HomeButton = styled(RectButton)`

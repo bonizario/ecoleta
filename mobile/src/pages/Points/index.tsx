@@ -89,15 +89,19 @@ const Points: React.FC = () => {
 
   useEffect(() => {
     const loadPoints = async () => {
-      const response = await api.get('points', {
-        params: {
-          city: routeParams.city,
-          uf: routeParams.uf,
-          items: selectedItems,
-        },
-      });
+      try {
+        const response = await api.get('points', {
+          params: {
+            city: routeParams.city,
+            uf: routeParams.uf,
+            items: selectedItems,
+          },
+        });
 
-      setPoints(response.data);
+        setPoints(response.data);
+      } catch (err) {
+        console.error(err);
+      }
     };
 
     loadPoints();
