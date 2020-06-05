@@ -35,10 +35,10 @@ const Home = () => {
 
       <Footer>
         <HomeButton onPress={handleNavigateToPoints}>
+          <HomeButtonText>Entrar</HomeButtonText>
           <HomeButtonIcon>
             <Icon name="arrow-right" color="#fcfcfc" size={24} />
           </HomeButtonIcon>
-          <HomeButtonText>Entrar</HomeButtonText>
         </HomeButton>
       </Footer>
     </Container>

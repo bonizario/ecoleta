@@ -44,8 +44,8 @@ export const HomeButtonIcon = styled.View`
   height: 60px;
   width: 60px;
   background-color: rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 8px;
-  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   justify-content: center;
   align-items: center;
 `;

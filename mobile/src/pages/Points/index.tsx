@@ -1,10 +1,10 @@
-import React from 'react';
-import { Feather as Icon } from '@expo/vector-icons';
+import React, { useState, useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
-
-import { TouchableOpacity, ScrollView } from 'react-native';
+import { ScrollView, SafeAreaView } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 
+import api from '../../services/api';
+import GoBackButton from '../../components/GoBackButton';
 import {
   Container,
   Title,
@@ -18,26 +18,53 @@ import {
   ItemsContainer,
   Item,
   ItemTitle,
-  SelectedItem,
 } from './styles';
 
-const Points = () => {
+interface Item {
+  id: number;
+  title: string;
+  image_url: string;
+}
+
+const Points: React.FC = () => {
+  const [items, setItems] = useState<Item[]>([]);
+  const [selectedItems, setSelectedItems] = useState<number[]>([]);
+
   const navigation = useNavigation();
 
-  function handleNavigateBack() {
-    navigation.goBack();
-  }
+  useEffect(() => {
+    const loadItems = async () => {
+      try {
+        const response = await api.get('items');
+
+        setItems(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    loadItems();
+  }, []);
 
   function handleNavigateToDetails() {
     navigation.navigate('Details');
   }
 
+  function handleSelectItem(id: number) {
+    const alreadySelected = selectedItems.indexOf(id);
+
+    if (alreadySelected === -1) setSelectedItems([...selectedItems, id]);
+    else {
+      const filteredItems = selectedItems.filter(item => item !== id);
+
+      setSelectedItems(filteredItems);
+    }
+  }
+
   return (
-    <>
+    <SafeAreaView style={{ flex: 1 }}>
       <Container>
-        <TouchableOpacity onPress={handleNavigateBack}>
-          <Icon name="arrow-left" size={20} color="#34cb79" />
-        </TouchableOpacity>
+        <GoBackButton />
         <Title>Bem vindo</Title>
         <Description>Encontre no mapa um ponto de coleta</Description>
         <MapContainer>
@@ -76,62 +103,20 @@ const Points = () => {
           showsHorizontalScrollIndicator={false}
           contentContainerStyle={{ paddingHorizontal: 20 }}
         >
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
-
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
-
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
-
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
-
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
-
-          <Item onPress={() => {}}>
-            <SvgUri
-              width={42}
-              height={42}
-              uri="http://192.168.1.9:3333/uploads/lampadas.svg"
-            />
-            <ItemTitle>Lâmpadas</ItemTitle>
-          </Item>
+          {items.map(item => (
+            <Item
+              key={String(item.id)}
+              onPress={() => handleSelectItem(item.id)}
+              activeOpacity={1}
+              isSelected={selectedItems.includes(item.id)}
+            >
+              <SvgUri width={42} height={42} uri={item.image_url} />
+              <ItemTitle>{item.title}</ItemTitle>
+            </Item>
+          ))}
         </ScrollView>
       </ItemsContainer>
-    </>
+    </SafeAreaView>
   );
 };
 

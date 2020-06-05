@@ -50,7 +50,7 @@ export const AddressContent = styled.Text`
 export const Footer = styled.View`
   border-top-width: ${StyleSheet.hairlineWidth}px;
   border-color: #999;
-  padding: 20px 32px 0;
+  padding: 20px 32px;
   flex-direction: row;
   justify-content: space-between;
 `;
