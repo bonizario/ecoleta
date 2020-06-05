@@ -65,6 +65,7 @@ export const MapMarkerTitle = styled.Text`
   color: #fff;
   font-size: 13px;
   font-family: Roboto_400Regular;
+  text-align: center;
   line-height: 23px;
 `;
 
