@@ -90,6 +90,8 @@ const CreatePoint = () => {
 
   function handleSelectUf(event: ChangeEvent<HTMLSelectElement>) {
     const uf = event.target.value;
+    if (uf === '0') setSelectedCity('0');
+
     setSelectedUf(uf);
   }
 
@@ -218,6 +220,7 @@ const CreatePoint = () => {
             <div className="field">
               <label htmlFor="city">Cidade</label>
               <select
+                disabled={selectedUf === '0'}
                 name="city"
                 id="city"
                 value={selectedCity}
