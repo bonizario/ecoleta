@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import { ScrollView, SafeAreaView, Alert } from 'react-native';
 import { SvgUri } from 'react-native-svg';
 import * as Location from 'expo-location';
@@ -35,6 +35,11 @@ interface Point {
   longitude: number;
 }
 
+interface Params {
+  uf: string;
+  city: string;
+}
+
 const Points: React.FC = () => {
   const [items, setItems] = useState<Item[]>([]);
   const [points, setPoints] = useState<Point[]>([]);
@@ -42,6 +47,9 @@ const Points: React.FC = () => {
   const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0]);
 
   const navigation = useNavigation();
+  const routes = useRoute();
+
+  const routeParams = routes.params as Params;
 
   useEffect(() => {
     const loadPosition = async () => {
@@ -83,9 +91,9 @@ const Points: React.FC = () => {
     const loadPoints = async () => {
       const response = await api.get('points', {
         params: {
-          city: 'Rio do Sul',
-          uf: 'SC',
-          items: [1, 2],
+          city: routeParams.city,
+          uf: routeParams.uf,
+          items: selectedItems,
         },
       });
 
@@ -93,7 +101,7 @@ const Points: React.FC = () => {
     };
 
     loadPoints();
-  }, []);
+  }, [selectedItems]);
 
   function handleNavigateToDetails(id: number) {
     navigation.navigate('Details', { point_id: id });
@@ -121,10 +129,8 @@ const Points: React.FC = () => {
             <Map
               loadingEnabled={initialPosition[0] === 0}
               initialRegion={{
-                // latitude: initialPosition[0],
-                // longitude: initialPosition[1],
-                latitude: -46.45456,
-                longitude: -35.451591,
+                latitude: initialPosition[0],
+                longitude: initialPosition[1],
                 latitudeDelta: 0.014,
                 longitudeDelta: 0.014,
               }}

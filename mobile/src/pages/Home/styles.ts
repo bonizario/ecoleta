@@ -30,6 +30,15 @@ export const Description = styled.Text`
 
 export const Footer = styled.View``;
 
+export const FooterInput = styled.TextInput`
+  height: 60px;
+  background-color: #fcfcfc;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 0 24px;
+  font-size: 16px;
+`;
+
 export const HomeButton = styled(RectButton)`
   background-color: #34cb79;
   height: 60px;
