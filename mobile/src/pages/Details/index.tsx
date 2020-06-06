@@ -26,6 +26,7 @@ interface Params {
 interface Data {
   point: {
     image: string;
+    image_url: string;
     name: string;
     whatsapp: string;
     email: string;
@@ -80,7 +81,7 @@ const Details: React.FC = () => {
       <Container>
         <GoBackButton />
 
-        <PointImage source={{ uri: data.point.image }} />
+        <PointImage source={{ uri: data.point.image_url }} />
         <PointName>{data.point.name}</PointName>
         <PointItems>{data.items.map(item => item.title).join(', ')}</PointItems>
 
