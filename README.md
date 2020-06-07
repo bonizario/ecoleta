@@ -1,8 +1,8 @@
-# Ecoleta
-
 <h1 align="center">
   <img alt="Ecoleta" title="Ecoleta" src="./assets/logo.png" />
 </h1>
+
+<br />
 
 <h1 align="center">
   Seu marketplace de coleta de resíduos
@@ -34,7 +34,9 @@
   </a>
 </p>
 
-## :fallen_leaf: Sobre
+<br />
+
+# :fallen_leaf: Sobre
 
 **Ecoleta** é uma aplicação criada para ajudar pessoas a encontrarem empresas e pontos de coleta para reciclagem.
 
@@ -48,9 +50,13 @@ Na página web, as empresas e entidades poderão cadastrar informações como:
 
 No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem instituições próximas e entrar em contato via e-mail ou whatsapp.
 
-## :art: Layout
+<br />
 
-### :computer: Web
+# :art: Layout
+
+O layout da aplicação está disponível no [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A546):
+
+## Web
 
 <table cellspacing="0" cellpadding="0">
   <tr>
@@ -65,7 +71,7 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
   </tr>
 </table>
 
-### :iphone: Mobile
+## Mobile
 
 <table cellspacing="0" cellpadding="0">
   <tr>
@@ -76,9 +82,11 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
   </tr>
 </table>
 
-## :rocket: Tecnologias
+<br />
 
-### Front end & Mobile
+# :rocket: Tecnologias
+
+## Front end & Mobile
 
 - [React](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
@@ -93,7 +101,7 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
 - [Expo](https://expo.io/)
 - [VS Code][vc] com [EditorConfig][vceditconfig], [ESLint][vceslint] e [Prettier][vcprettier]
 
-### Back end
+## Back end
 
 - [Express](https://github.com/expressjs/express)
 - [Typescript](https://www.typescriptlang.org/)
@@ -105,7 +113,9 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
 - [Multer](https://github.com/expressjs/multer)
 - [VS Code][vc] com [EditorConfig][vceditconfig], [ESLint][vceslint] e [Prettier][vcprettier]
 
-## Como contribuir
+<br />
+
+# :speech_balloon: Como contribuir
 
 - Faça um **fork** desse repositório
 - Crie uma branch com a sua feature: `git checkout -b my-feature`
@@ -113,15 +123,25 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
 - Faça um commit contando o que você fez: `git commit -m "feat: my new feature!"`
 - Envie para o Github: `git push origin my-feature`
 
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+_Caso tenha alguma dúvida, confira este [guia de como contribuir no GitHub :)](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md)_
 
-## :memo: License
+<br />
+
+# :memo: License
 
 Esse projeto está sob a licença MIT. Consulte [LICENSE](https://github.com/Bonizario/be-the-hero/blob/master/LICENSE) para mais informações.
 
----
+<br />
 
-Desenvolvido por [Gabriel Bonizario](https://www.linkedin.com/in/gabriel-bonizario/) 👋🏻
+# :postbox: Contato
+
+Desenvolvido por **Gabriel Bonizário** 👋🏻
+
+**Linkedin**: [gabriel-bonizario](https://www.linkedin.com/in/gabriel-bonizario/)
+
+**Email**: gabrielbonizario98@gmail.com
+
+---
 
 [vc]: https://code.visualstudio.com/
 [vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
