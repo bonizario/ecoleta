@@ -117,11 +117,15 @@ O layout da aplicação está disponível no [Figma](https://www.figma.com/file/
 
 # :speech_balloon: Como contribuir
 
-- Faça um **fork** desse repositório
-- Crie uma branch com a sua feature: `git checkout -b my-feature`
+Caso queira contribuir para esse repositório, seja corrigindo bugs, adicionando comentários ou novas features, você pode seguir esse tutorial abaixo:
+
+- Faça um **[fork](https://help.github.com/pt/github/getting-started-with-github/fork-a-repo)** desse repositório
+- **[Clone](https://help.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository)** o repositório que você fez o fork
+- Crie uma branch com a sua feature: `git checkout -b minha-alteracao`
 - Envie suas alterações para a _staging area_: `git add .`
-- Faça um commit contando o que você fez: `git commit -m "feat: my new feature!"`
-- Envie para o Github: `git push origin my-feature`
+- Faça um commit contando o que você fez: `git commit -m "feat: minha nova alteracao!"`
+- Faça um push para a sua branch: `git push origin minha-alteracao`
+- Agora é só abrir a sua _Pull Request_ no repositório que você fez o fork!
 
 _Caso tenha alguma dúvida, confira este [guia de como contribuir no GitHub :)](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md)_
 
