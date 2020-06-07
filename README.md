@@ -52,38 +52,29 @@ No aplicativo mobile, os usuários poderão navegar pelo mapa para encontrarem i
 
 ### :computer: Web
 
-<p style="display: flex; justify-content: space-around;">
-
-  <span style="display: flex; flex-direction: column; align-items: center; justify-content: space-between;">
-    <img alt="NextLevelWeek" src="assets/home.png" width="96%"  />
-    <img alt="NextLevelWeek" src="assets/search.png" width="96%"  />
-    <img alt="NextLevelWeek" src="assets/index.png" width="96%"  />
-  </span>
-
-  <span style="display: flex; flex-direction: column; align-items: center;">
-    <img alt="NextLevelWeek" src="assets/register.png" width="96%" />
-  </span>
-
-</p>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img alt="NextLevelWeek" src="assets/home.png" /></td>
+    <td rowspan="3"><img alt="NextLevelWeek" src="assets/register.png" /></td>
+  </tr>
+  <tr>
+    <td><img alt="NextLevelWeek" src="assets/search.png" /></td>
+  </tr>
+  <tr>
+    <td><img alt="NextLevelWeek" src="assets/index.png" /></td>
+  </tr>
+</table>
 
 ### :iphone: Mobile
 
-<p style="display: flex; align-items: flex-start; jusfity-content: space-around;">
-
-  <span>
-    <img alt="NextLevelWeek" src="assets/mobile-start.png" width="96%"  />
-  </span>
-  <span>
-    <img alt="NextLevelWeek" src="assets/mobile-home.png" width="96%"  />
-  </span>
-  <span>
-    <img alt="NextLevelWeek" src="assets/mobile-details.png" width="96%"  />
-  </span>
-  <span>
-    <img alt="NextLevelWeek" src="assets/mobile-splash.png" width="96%" />
-  </span>
-
-</p>
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <td><img alt="NextLevelWeek" src="assets/mobile-start.png" /></td>
+    <td><img alt="NextLevelWeek" src="assets/mobile-home.png" /></td>
+    <td><img alt="NextLevelWeek" src="assets/mobile-details.png" /></td>
+    <td><img alt="NextLevelWeek" src="assets/mobile-splash.png" /></td>
+  </tr>
+</table>
 
 ## :rocket: Tecnologias
 
