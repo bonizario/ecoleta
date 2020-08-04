@@ -13,7 +13,7 @@
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Bonizario/be-the-hero?color=04D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Bonizario/ecoleta?color=04D361">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/bonizario/ecoleta?color=04D361">
 
@@ -29,7 +29,7 @@
     <img alt="License" src="https://img.shields.io/github/license/bonizario/ecoleta?color=322153">
   </a>
 
-  <a href="https://github.com/Bonizario/be-the-hero/stargazers">
+  <a href="https://github.com/Bonizario/ecoleta/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/bonizario/ecoleta?style=social">
   </a>
 </p>
@@ -127,13 +127,13 @@ Caso queira contribuir para esse repositório, seja corrigindo bugs, adicionando
 - Faça um push para a sua branch: `git push origin minha-alteracao`
 - Agora é só abrir a sua _Pull Request_ no repositório que você fez o fork!
 
-_Caso tenha alguma dúvida, confira este [guia de como contribuir no GitHub :)](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md)_
+_Caso tenha alguma dúvida, confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions/blob/master/translations/README.pt_br.md) :)_
 
 <br />
 
 # :memo: License
 
-Esse projeto está sob a licença MIT. Consulte [LICENSE](https://github.com/Bonizario/be-the-hero/blob/master/LICENSE) para mais informações.
+Esse projeto está sob a licença MIT. Consulte [LICENSE](https://github.com/Bonizario/ecoleta/blob/master/LICENSE) para mais informações.
 
 <br />
 
